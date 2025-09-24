@@ -14,7 +14,7 @@ on:
       region:
         description: '选择部署区域'
         required: true
-        default: 'SG'
+        default: 'US'
         type: choice
         options:
           - SG
@@ -24,7 +24,20 @@ on:
         required: true
         type: boolean
         default: false
-
+  schedule:
+    - cron: '55 0 7 * * *'   # 每天 7:55（北京时间）
+      timezone: 'Asia/Shanghai'
+    - cron: '5 0 8 * * *'   # 每天 8:05（北京时间）
+      timezone: 'Asia/Shanghai'
+    - cron: '10 0 8 * * *'  # 每天 8:10（北京时间）
+      timezone: 'Asia/Shanghai'
+    - cron: '15 0 8 * * *'  # 每天 8:15（北京时间）
+      timezone: 'Asia/Shanghai'
+    - cron: '20 0 8 * * *'  # 每天 8:20（北京时间）
+      timezone: 'Asia/Shanghai'
+    - cron: '25 0 8 * * *'  # 每天 8:25（北京时间）
+      timezone: 'Asia/Shanghai'
+      
 env:
   MEMORY: 256M
 
