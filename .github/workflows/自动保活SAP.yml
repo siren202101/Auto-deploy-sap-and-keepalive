@@ -2,8 +2,7 @@ name: 自动保活 SAP
 
 on:
   schedule:
-    - cron: '10 8 * * *'   # 每天 7:55（北京时间）
-      timezone: 'Asia/Shanghai'
+    - cron: '45 23 * * *'      
   workflow_dispatch:          # 允许手动触发
 
 jobs:
